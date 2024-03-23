@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>BeagleBone Beat-Box</title>
+	<link rel="stylesheet" href="stylesheets/style.css" />
+</head>
+
+<body>
+	<div class="header">
+		<h1>BeagleBone Beat-Box</h1>
+		<p id="name">by Gabe Ko & Ian Hwang</p>
+	</div>
+	<div class="panels-container">
+		<div class="panels">
+			<div class="control-panel">
+				<h2>Drum Beat Selection</h2>
+				<p id="current-mode">Current drum beat mode is: <span id="current-beat"></span></p>
+				<div class="beat-select">
+					<button id="none">None</button>
+					<button id="rock1">Rock #1</button>
+					<button id="rock2">Rock #2</button>
+					<button id="rock3">Rock #3</button>
+					<button id="rock4">Rock #4</button>
+				</div>
+				<h2>Volume</h2>
+				<div class="volume">
+					<button id="volume-down">-</button>
+					<input type="number" id="volume" value="80" min="0" max="100" readonly />
+					<button id="volume-up">+</button>
+				</div>
+				<h2>Tempo</h2>
+				<div class="tempo">
+					<button id="tempo-down">-</button>
+					<input type="number" id="tempo" value="120" min="40" max="300" readonly />
+					<button id="tempo-up">+</button>
+				</div>
+				<h2>Play Drum Sounds</h2>
+				<div class="buttons-row1">
+					<button id="play-hihat">Hi-Hat</button>
+					<button id="play-snare">Snare</button>
+					<button id="play-base">Base</button>
+				</div>
+				<div class="buttons-row2">
+					<button id="terminate-button">Terminate Program</button>
+				</div>
+			</div>
+			<div class="status-panel">
+				<h2>BeatBox's Status</h2>
+				<p>Device up for: </span><span id="uptime"></span></p>
+			</div>
+		</div>
+	</div>
+	<div id="error-box" class="error-hidden">
+		<p id="error-title"></p>
+		<p id="error-message"></p>
+		<button id="error-close">Close</button>
+	</div>
+	<script src="/socket.io/socket.io.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/jquery-1.8.0.min.js" type="text/javascript"></script>
+	<script src="javascripts/beatbox_controller.js" type="text/javascript"></script>
+</body>
+
+</html>

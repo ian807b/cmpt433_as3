@@ -1,0 +1,77 @@
+.header {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.panels {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.status-panel {
+	border: 1px solid #000;
+	padding: 20px;
+	width: 300px;
+}
+
+.control-panel {
+	border: 1px solid #000;
+	padding: 20px;
+	width: 400px;
+}
+
+input {
+	width: 60px;
+	margin: 5px;
+	padding: 5px;
+}
+
+.header h1 {
+	margin-bottom: 3px;
+}
+
+#name {
+	margin-top: 0px;
+}
+
+#current-beat,
+#uptime {
+	font-weight: bold;
+}
+
+h2 {
+	margin-bottom: 10px;
+}
+
+#current-mode {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.buttons-row2 {
+	margin-top: 30px;
+}
+
+#error-box {
+	background-color: red;
+	color: white;
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 5px;
+	width: 500px;
+	margin: 20px auto;
+}
+
+.error-hidden {
+	display: none;
+}
+
+#error-close {
+	display: block;
+	margin: 10px auto;
+}
+
+#error-title {
+	font-weight: bold;
+}

@@ -1,0 +1,26 @@
+#ifndef UDP_H
+#define UDP_H
+
+typedef enum {
+  COMMAND_VOLUMEUP,
+  COMMAND_VOLUMEDOWN,
+  COMMAND_TEMPOUP,
+  COMMAND_TEMPODOWN,
+  COMMAND_TERMINATE,
+  COMMAND_BEATNONE,
+  COMMAND_BEATROCK1,
+  COMMAND_BEATROCK2,
+  COMMAND_BEATROCK3,
+  COMMAND_BEATROCK4,
+  COMMAND_PLAYHIHAT,
+  COMMAND_PLAYSNARE,
+  COMMAND_PLAYBASE,
+  COMMAND_SENDSTATUS,
+  COMMAND_ERROR,
+} Command;
+
+void UDP_init(void);
+void UDP_cleanup(void);
+void UDP_sendStatus(int volume, int tempo, int currentTrack);
+
+#endif
